@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập cuối tuần 3 - Mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let arr = [
+        [1,2,3],
+        [1,4,6],
+        [1,7,8,9]
+    ]
+    // 1.	Tính tổng các phần tử trong mảng 2 chiều
+    let sum = 0;
+    for(let row = 0; row < arr.length; row++) {
+        for(let col = 0; col < arr[row].length; col++) {
+            sum += arr[row][col];
+        }
+    }
+    console.log(sum);
+    // 2.	Tính tổng các phần tử trong 1 hàng và hiển thị tổng của từng hàng
+
+
+    for(let row = 0; row < arr.length; row++){
+        let sumOfRow = 0;
+        for(let col = 0; col < arr[row].length; col++){
+            sumOfRow += arr[row][col];
+        }
+        console.log(sumOfRow);
+    }
+    // 3.	Tính tổng các phần tử của 1 cột và hiển thị tổng của từng cột
+    let maxCol = arr[1].length;
+    for(let row = 0; row < arr.length; row++) {
+        if(maxCol < arr[row].length) {
+            maxCol = arr[row].length;
+        }
+    }
+    console.log(maxCol);
+    for(let col = 0; col < maxCol; col++) {
+        let sumOfCol = 0;
+        for(let row = 0; row < arr.length; row++) {
+            if(arr[row][col] !== undefined) {
+                sumOfCol += arr[row][col];
+            }
+        }
+        console.log(sumOfCol);
+    }
+    // 4.	Tìm giá trị lớn nhất của mỗi cột.
+    for(let col = 0; col < maxCol; col++) {
+        let maxOfCol = arr[0][col];
+        for(let row = 0; row < arr.length; row++) {
+            if(arr[row][col] == undefined) {
+                continue;
+            }
+            if(maxOfCol < arr[row][col]) {
+                maxOfCol = arr[row][col];
+            }
+        }
+        console.log(maxOfCol);
+    }
+
+</script>
+</body>
+</html>

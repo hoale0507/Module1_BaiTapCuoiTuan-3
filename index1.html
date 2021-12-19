@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập cuối tuần 3 - Mảng 1 chiều</title>
+</head>
+<body>
+<script>
+    // Cho 1 mảng các số nguyên:
+    //     1.	Nhập vào 1 số và kiểm tra xem số đó có trong mảng hay không nếu có thì hiển thị vị trí của số đó trong mảng
+    let arr = [1,2,3,4,5,6];
+    let n = 1;
+    if(arr.indexOf(n) !== -1) {
+        console.log(n + " is found at " + arr.indexOf(n));
+    } else {
+        console.log("can not find " + n);
+    }
+
+    // 2.	Tính tích các phần tử có trong mảng
+    let multi = arr[0];
+    for(let i = 0; i < arr.length; i++) {
+        multi *= arr[i];
+    }
+    console.log(multi);
+
+    // 3.	Nhập vào 1 số và đếm xem số đó xuất hiện bao nhiêu lần trong mảng.
+    let x = 1;
+    let count = 0;
+    for(let i = 0; i < arr.length; i++ ) {
+        if (x = arr[i]) {
+            count++;
+        }
+    }
+    console.log(count);
+
+
+
+
+
+</script>
+</body>
+</html>
